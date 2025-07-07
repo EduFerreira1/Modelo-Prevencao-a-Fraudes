@@ -28,22 +28,25 @@ O projeto segue as melhores práticas do framework **CRISP-DM**, com as seguinte
    - Análise exploratória (EDA) dos dados transacionais: variáveis de cliente, terminal, valor, tempo, localização, etc.
    - Estudo das principais fontes e periodicidade das bases.
    - Testes de sanidade e análise de variáveis alvo (fraude vs. não fraude).
+   - [Acesse o código dessa etapa aqui](01%EDA/Exploratory%Data%Analysis%-%EDA_.ipynb)
 
 3. **Preparação dos Dados**
    - Ajuste de tipos, joins entre diferentes bases (cliente, terminal, transação).
    - Padronização de variáveis, criação de novas features (ex: médias e desvios por cliente ou terminal, contagem de transações por período, localização).
    - Tratamento de desbalanceamento: análise de técnicas como SMOTE, oversampling, target artificial.
    - Divisão em treino e teste, sempre respeitando o corte temporal (out-of-time split) para evitar vazamentos.
+   - [Acesse o código dessa etapa aqui](02%Data%Preparation/Data%Prep.ipynb)
 
 4. **Modelagem**
    - Treinamento de modelos de classificação como **Random Forest** e **XGBoost**, comparando com o modelo vigente.
    - Otimização de hiperparâmetros (grid/random search).
-   - Avaliação por métricas técnicas e de negócio (ver abaixo).
+   - Avaliação por métricas técnicas e de negócio.
 
 5. **Avaliação**
    - Métricas técnicas: **Acurácia**, **ROC-AUC**, **Precision**, **Recall**, **F1-Score**, **KS**, **Gini**.
    - Avaliação do impacto operacional: taxas de aprovação, taxas de fraude, fraudes evitadas, transações impactadas (falsos positivos).
    - Simulação de cenários de política de aprovação, quantificando o trade-off entre reduzir fraude e impactar clientes legítimos.
+   - [Acesse o código das etapas 4 e 5 aqui](03%Modeling%and%Evaluation/Modeling%and%Evaluation.ipynb)
 
 6. **Implantação**
    - Orientação sobre como implementar o modelo em ambiente produtivo.
@@ -61,7 +64,6 @@ O projeto segue as melhores práticas do framework **CRISP-DM**, com as seguinte
 
 - **Modelos:** Random Forest, XGBoost, (baseline: modelo vigente da empresa).
 - **Técnicas de Data Prep:** Feature engineering, normalização, encoding de categóricas, criação de variáveis agregadas.
-- **Tratamento de desbalanceamento:** Análise de uso de técnicas como SMOTE e target artificial.
 - **Métricas:** KS, AUC-ROC, Precision, Recall, F1-Score, custo operacional (fraudes evitadas x transações impactadas).
 - **Validação:** Out-of-time split para garantir robustez na generalização.
 
@@ -87,7 +89,7 @@ O desempenho dos modelos foi avaliado em diferentes cenários de política de ap
   - XGBoost: 125  
 - **Transações impactadas:**  
   - Random Forest: 429  
-  - XGBoost: 429  
+  - XGBoost: 461  
 
 > Os modelos Random Forest e XGBoost superaram o modelo vigente em capacidade de evitar fraudes, mantendo uma taxa de aprovação próxima do desejado. O ajuste da política permite balancear o risco de fraude evitada com o impacto no cliente (transações legítimas bloqueadas).
 
