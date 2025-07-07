@@ -70,7 +70,7 @@ O projeto segue as melhores práticas do framework **CRISP-DM**, com as seguinte
 O desempenho dos modelos foi avaliado em diferentes cenários de política de aprovação. Destacam-se os seguintes resultados:
 
 <p align="center">
-  <img src="Images/results.png" alt="Resultados comparativos dos modelos" width="600">
+  <img src="04 Results/results.png" alt="Resultados comparativos dos modelos" width="600">
 </p>
 
 #### Cenário 1 - Taxa de aprovação 99,50%  
