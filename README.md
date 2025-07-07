@@ -33,7 +33,6 @@ O projeto segue as melhores práticas do framework **CRISP-DM**, com as seguinte
 3. **Preparação dos Dados**
    - Ajuste de tipos, joins entre diferentes bases (cliente, terminal, transação).
    - Padronização de variáveis, criação de novas features (ex: médias e desvios por cliente ou terminal, contagem de transações por período, localização).
-   - Tratamento de desbalanceamento: análise de técnicas como SMOTE, oversampling, target artificial.
    - Divisão em treino e teste, sempre respeitando o corte temporal (out-of-time split) para evitar vazamentos.
    - [Acesse o código dessa etapa aqui](02%Data%Preparation/Data%Prep.ipynb)
 
